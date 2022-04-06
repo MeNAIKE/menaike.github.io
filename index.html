@@ -1,0 +1,728 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Olá, eu sou Bernardo Jacobus!</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3b63c388-0a6d-49cb-a3af-0f28b1fa3ccf" class="page sans"><header><img class="page-cover-image" src="Ola%CC%81,%20eu%20s%20b4ea0/bg.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/WhatsApp-Image-2022-03-29-at-12.09.png"/></div><h1 class="page-title">Olá, eu sou Bernardo Jacobus!</h1></header><div class="page-body"><blockquote id="c89891b2-091d-4748-b5ab-6e1fae455401" class="">Sou um Product Designer do Rio Grande do Sul.</blockquote><p id="a05c6cbc-0bf8-4e01-8436-eec472537ab6" class="">
+</p><hr id="0dd94679-01b9-42e3-a914-2029f9d59153"/><p id="bdfb3996-5761-4b1f-80ad-5254172e8d1b" class="">
+</p><div id="922bb43e-d8e6-49a9-af2f-ed0b7ef0d542" class="column-list"><div id="26c14c82-8570-49a7-8fc9-75d668892da5" style="width:25%" class="column"><nav id="ba68747f-c1ab-4ab1-9c4e-9c1caed8b958" class="block-color-pink_background table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#7b18d17e-e498-402d-8624-038c16a6573d">😎  Sobre mim
+</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#360075a9-c061-4765-942b-fc3e1e65f079">📝 Meu Design
+</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e1ada19f-2a6c-40a0-b29c-3a3b9835b4f5">🗃 Meus trabalhos</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#cffae51b-476e-46b8-896f-74d5db898192">🛠 Ferramentas</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6da5ed2d-ec7e-4b98-b903-ef9a5a5ba664">⏰ Minha experiência</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#69ebcd46-0914-44cb-ae84-7923ecbe7bc8">✉️ Meus contatos</a></div></nav><p id="9b0ca676-94dc-4b62-8a45-1025e118e7e5" class="">
+</p></div><div id="041d4b8c-e9d2-418e-bdd8-966ebe25ef95" style="width:75%" class="column"><figure id="b4ea01bc-41ef-4988-936e-487cc5061e8d" class="image"><a href="Ola%CC%81,%20eu%20s%20b4ea0/lisa2.png"><img style="width:480px" src="Ola%CC%81,%20eu%20s%20b4ea0/lisa2.png"/></a></figure><p id="eb4d5e34-c698-47b3-ad9e-ea0f5d7392d7" class=""><mark class="highlight-gray"><em>Lisa Antonieta - Whiskas sobre tela</em></mark></p></div></div><hr id="bcc8725c-9b32-4efb-8192-2b8155729271"/><p id="ebaf923d-3c16-40bf-9f31-c9bbd8bbd5e8" class="">
+</p><h3 id="7b18d17e-e498-402d-8624-038c16a6573d" class="">😎  Sobre mim
+</h3><p id="d9ccef73-55a3-4810-895f-3e194207f1e9" class="">Aficionado por conteúdo <em>geek</em> e <em>gamer</em> nas horas vagas.</p><p id="d8f38195-fc9f-4a8f-9e75-de192c0a0b4d" class="">Tenho cerca de <strong>5 anos de experiência com Design visual</strong> em geral e já faz algum tempo que migrei para a área de UX.</p><p id="e15635f7-7a59-4349-a0f2-ad31b24c6665" class="">Acabei me encontrando muito bem e tomado um enorme gosto pela parte de <strong>acessibilidade dentro de produtos digitais, </strong>visto que esta é uma área onde apenas recentemente tem se recebido a devida atenção, por conta disto procuro sempre que possível tomar parte em alguma iniciativa de acessibilidade seja qualquer o projeto em que eu tenha participação, pois acredito que a experiência de usuário precise ser consistente para todos.</p><p id="a2305014-9a85-4400-9b11-2b0c86caef84" class="">Também faço parte da comunidade Surda e por conta dessa vivência, acabo por ser o “chato da acessibilidade” por sempre estar buscando uma melhor inclusão desta minoria onde posso, o que acaba vindo bem a calhar com a minha atuação hoje no mercado hahaha.</p><p id="3008fe04-b1d4-4249-95f8-95668d2034f0" class="">
+</p><p id="b52b71e1-6e02-48d4-adf7-547d0eecbef3" class=""><strong>Curiosidades sobre mim...</strong></p><div id="de993670-02c8-4075-ac27-d6d35d5a4df2" class="column-list"><div id="6a7d31f8-4995-43ab-bf5c-60fa7c3a31e7" style="width:50%" class="column"><ul id="a28d98ec-cfd8-483f-bd14-66ffcb79c0e6" class="bulleted-list"><li style="list-style-type:disc">Gosto de <em>streamar</em> jogos na <a href="https://www.twitch.tv/menic">Twitch</a></li></ul><ul id="5126ad83-8854-4678-8b3c-10834a4636e4" class="bulleted-list"><li style="list-style-type:disc">Sonho em conhecer o Japão 🇯🇵</li></ul><ul id="948005c7-2677-4b82-a6bf-4d1a4515035b" class="bulleted-list"><li style="list-style-type:disc">Minha comida favorita é Sushi</li></ul></div><div id="11d125e7-75ef-4bcc-a140-25ad5e9a0f9d" style="width:50%" class="column"><ul id="7761789e-3516-49df-8c63-b2307da6fd8e" class="bulleted-list"><li style="list-style-type:disc">Tenho um <a href="https://vnx.uvnworks.com/">grupo</a> de tradução de jogos</li></ul><ul id="ac6cca01-0b0b-4846-b100-4e187e42f6a2" class="bulleted-list"><li style="list-style-type:disc">Realizei um intercâmbio para a China 🇨🇳</li></ul><ul id="758764d7-8547-4498-ae8c-10df584660fc" class="bulleted-list"><li style="list-style-type:disc">Sei 3 línguas, sendo elas Inglês, LIBRAS e Espanhol</li></ul><p id="72337cb0-0b70-4e4c-9aea-293f539efffd" class="">
+</p></div></div><hr id="0ca35820-814c-4bc8-ac8b-e2a35c515f80"/><p id="4bec33d5-2489-4e6a-8e14-c9461ea8a181" class="">
+</p><h3 id="360075a9-c061-4765-942b-fc3e1e65f079" class="">📝 Meu Design
+</h3><p id="8c0088bf-bab2-4258-a288-0962c9f2289b" class="">Meu processo de Design é bem padrão. </p><p id="b3764ce3-bc75-4634-ab80-017db79d75f1" class="">Nada diferente das definições de processos de Design que se encontra em qualquer outro lugar.</p><p id="52a9aaeb-3ad5-489a-8584-4a2a8df6fc51" class="">Se pudesse, apenas o descreveria como um processo adaptativo, com iterações e colaborativo.</p><p id="cfc22c16-a025-48a0-aa83-02247d1239ed" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b43fb5f1-c6a3-4a06-a495-ff49c96bfd96"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Eu acredito que um Product Designer precise ter os seus próprios meios de realizar o seu Design mas que seja possível adaptar e moldar-se ao ambiente em que está atuando, vejo como um processo fluido e de constante mudanças.</div></figure><p id="b40bd112-85c6-4396-b2d7-d0f99012c5b3" class="">
+</p><hr id="20298692-9484-4220-a2d1-a167b2f9be85"/><h3 id="e1ada19f-2a6c-40a0-b29c-3a3b9835b4f5" class="">🗃 Meus trabalhos</h3><div id="ed89d75b-3078-4676-b436-4ba9ba18108e" class="collection-content"><h4 class="collection-title">✏️</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Ferramentas</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Habilidades</th></tr></thead><tbody><tr id="96717f87-7a4c-41aa-b1a4-6481b8b2eae1"><td class="cell-title"><a href="Ola%CC%81,%20eu%20s%20b4ea0/%E2%9C%8F%EF%B8%8F%20ed89d/UX%20UI%20-%20Ap%2096717.html">UX/UI - App Realize Cartões </a></td><td class="cell-Q&lt;DN"><span class="selected-value select-value-color-brown">Figma</span><span class="selected-value select-value-color-purple">Photoshop</span></td><td class="cell-,%=V"><span class="selected-value select-value-color-pink">Design assets</span><span class="selected-value select-value-color-pink">Design concept</span><span class="selected-value select-value-color-pink">Prototype</span><span class="selected-value select-value-color-pink">User flow</span></td></tr><tr id="a3d5a853-3919-4511-a0ed-59f7bf409c51"><td class="cell-title"><a href="Ola%CC%81,%20eu%20s%20b4ea0/%E2%9C%8F%EF%B8%8F%20ed89d/Vivo%20Manut%20a3d5a.html">Vivo Manutenção 2019-2020</a></td><td class="cell-Q&lt;DN"><span class="selected-value select-value-color-purple">Photoshop</span></td><td class="cell-,%=V"><span class="selected-value select-value-color-pink">Design assets</span><span class="selected-value select-value-color-pink">Design concept</span><span class="selected-value select-value-color-pink">Prototype</span></td></tr><tr id="65b5e4df-0411-4df0-90be-ffa0ef389196"><td class="cell-title"><a href="Ola%CC%81,%20eu%20s%20b4ea0/%E2%9C%8F%EF%B8%8F%20ed89d/UX%20UI%20-%20Ap%2065b5e.html">UX/UI - App Busca Imóvel</a></td><td class="cell-Q&lt;DN"><span class="selected-value select-value-color-brown">Figma</span></td><td class="cell-,%=V"><span class="selected-value select-value-color-pink">Design concept</span><span class="selected-value select-value-color-pink">Prototype</span><span class="selected-value select-value-color-pink">Style guide</span><span class="selected-value select-value-color-pink">User flow</span><span class="selected-value select-value-color-pink">Wireframe</span></td></tr></tbody></table></div><p id="360269b3-3205-4609-add1-22c09a6d4d17" class="">
+</p><hr id="9917d4d8-0866-41c9-98e0-3eff64acbfcf"/><h3 id="cffae51b-476e-46b8-896f-74d5db898192" class="">🛠 Ferramentas</h3><div id="b4b29bfd-5ae7-4b53-95f7-5a65e131435b" class="column-list"><div id="987c8bfc-6b99-4019-a835-9b62d6bd0443" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="159b01b5-b59d-431a-b73e-17a7c9217360"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/figma.svg"/></div><div style="width:100%">Figma</div></figure></div><div id="08836f09-9d12-477b-a43f-23fd2c35c111" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1027aa66-ece1-4f3d-a326-1dbd43223f2f"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/photoshop-cc.svg"/></div><div style="width:100%">Photoshop</div></figure></div></div><div id="4ea90e24-9f24-47e3-b3d7-6a96faf52e29" class="column-list"><div id="d174ed71-c666-41b9-85e7-3f7c866bace1" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="37c95293-909c-4c1c-94fb-e292912271d9"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/adobe-xd.svg"/></div><div style="width:100%">Adobe XD</div></figure></div><div id="6feb8cdb-ca9e-47d7-b6f8-2782e7b01484" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3cae93ee-91b4-47fc-9134-1f275cc65fb8"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/adobe-illustrator-cc.svg"/></div><div style="width:100%">Illustrator</div></figure></div></div><p id="9c491b9d-56c8-431f-8d81-f9babd0cbcde" class="">
+</p><hr id="144c1037-ee14-4568-bdf1-28033e24cbd4"/><p id="e2c4028e-358b-4fad-b614-9e206ffc5c93" class="">
+</p><h3 id="6da5ed2d-ec7e-4b98-b903-ef9a5a5ba664" class="">⏰ Minha experiência</h3><div id="119ceab5-5bd0-468d-90e7-bedec2df9fa5" class="column-list"><div id="d04ebe50-4766-4d1b-9eb6-fd1e542a22ec" style="width:50%" class="column"><p id="dae8ede3-ff08-4214-bc87-4bb2acfdef4f" class="">👨‍💻 <strong>Profissional</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a29173f0-216d-4926-a8af-1bfa327da719"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/1618423330411.jfif"/></div><div style="width:100%"><strong>CWI Software
+</strong><mark class="highlight-gray"><em>2021 → Hoje
+</em></mark><mark class="highlight-gray">
+Trabalho como UX/UI Designer, atuando na participação de concepção de produtos digitais.
+
+Hoje, participo ativamente de projetos dentro da área de Cartões do aplicativo da Renner.
+
+-Realizei pesquisas com usuários.
+-Desenvolvo fluxos de telas para produtos.
+-Faço manutenções de Design System.
+-Aplico e trabalho em consolidar uma melhor acessibilidade dentro de nossos projetos utilizando as regras de WCAG.</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6af95709-5e57-4508-98b3-fd3a2954edfc"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/1643208296467.jfif"/></div><div style="width:100%"><strong>Digital Republic
+</strong><mark class="highlight-gray"><em>2021 → 2021
+</em></mark><mark class="highlight-gray">
+Trabalhei como Designer, atuando em realmente qualquer área onde fosse necessário uma concepção criativa e visual.
+
+-Desenvolvi fluxos de telas para websites, mobile e desktops.
+-Realizei pesquisas de usabilidade em projetos internos do time.
+-Desenvolvi cards para mídias sociais de clientes.
+-Branding e criação de identidades visuais.</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e1055da4-61de-4bfc-ae87-ae4c81d95f04"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/1519908152060.jfif"/></div><div style="width:100%"><strong>LOFT Digital Agency
+</strong><mark class="highlight-gray"><em>2020 → 2021
+</em></mark><mark class="highlight-gray">
+Trabalhei como Diretor de Arte, atuando principalmente na criação e concepção de campanhas publicitarias.
+
+-Desenvolvi peças de motion para redes sociais.
+-Branding e criação de identidades visuais.
+-Criação de filtros para Instagram e Facebook.</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d3ab3087-afd8-4cf6-b0ea-f8f6942d1f1b"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/1603132612235.jfif"/></div><div style="width:100%"><strong>Digital Business
+</strong><mark class="highlight-gray"><em>2018 → 2020
+</em></mark><mark class="highlight-gray">
+Trabalhei como Designer gráfico, atuando principalmente na realização de manutenções internas e criação de peças para as plataformas da Vivo, como Website, Loja Online e aplicativos como Meu Vivo e Vivo Easy.
+
+-Criação e desdobramento de peças para realização de campanhas de ads para clientes como: Vivo, Subway, General Motors, Estácio, Bradesco, Banco Original, Cielo, Amazon Prime e CI&amp;T.
+-Storyboarding para realização de vídeos e animações.</mark></div></figure></div><div id="d877ce04-e0ea-4b2f-aba7-bbc4ed0fca49" style="width:50%" class="column"><p id="de8f4878-ecfe-443b-8d8d-e97a4b324b92" class="">👨‍🎓 <strong>Acadêmica</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4aec6441-fb70-4573-a8e8-c012390be57e"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/download.png"/></div><div style="width:100%">EBAC<strong>
+</strong><mark class="highlight-gray"><em>2021 → Hoje
+</em></mark><mark class="highlight-gray">
+Aqui eu estou estudando UX Design, visando melhorar minhas habilidades de pesquisa com usuário.</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="de8c996e-c116-4111-8817-a3052685c774"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/logo_192x192.png"/></div><div style="width:100%">MasterLibras<strong>
+</strong><mark class="highlight-gray"><em>2019 → 2020
+</em></mark><mark class="highlight-gray">
+Curso de LIBRAS do básico ao avançado.</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1f9eeddd-0da6-4332-914a-9764c4322619"><div style="font-size:1.5em"><img class="icon" src="Ola%CC%81,%20eu%20s%20b4ea0/destaque.jpg"/></div><div style="width:100%">Universidade Feevale<strong>
+</strong><mark class="highlight-gray"><em>2015 → 2018
+</em></mark><mark class="highlight-gray">
+Foi aqui que começou a minha jornada como Designer Gráfico, onde pude aprender um pouco de tudo relativo a área.</mark></div></figure></div></div><p id="8df53efa-6760-4576-9a7c-5a2dd70cc0ed" class="">
+</p><hr id="bedfbe7e-ac29-4fb7-989d-96ffe337274e"/><p id="433429c2-e37a-482f-a7c8-ba064b68464c" class="">
+</p><h3 id="69ebcd46-0914-44cb-ae84-7923ecbe7bc8" class="">✉️ Meus contatos</h3><div id="c7c08ae7-6993-4d74-8700-36f68a1520a9" class="column-list"><div id="0cc7ffff-a638-4cad-b6aa-dc66fdf20c15" style="width:50%" class="column"><p id="c1b43e68-9d55-4c64-b1cd-0b88bf4a7d24" class="">LinkedIn</p><figure id="a92936fc-63e4-4835-abed-3de854fb419b"><a href="https://www.linkedin.com/in/bernardo-jacobus/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Bernardo Jacobus - UX/UI Designer - CWI Software | LinkedIn</div><div class="bookmark-description">Always seeking new challenges, experience and personal development. Avid practitioner of a better accessibility. As a Designer, promoting good practices, quality and a tangible approach into researching for the best solution into what is needed. ------------------ Sempre em constante busca por novos desafios, experiências e desenvolvimento pessoal. Praticante ávido de uma melhor acessibilidade.</div></div><div class="bookmark-href"><img src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" class="icon bookmark-icon"/>https://www.linkedin.com/in/bernardo-jacobus/</div></div><img src="https://media-exp1.licdn.com/dms/image/C4E03AQHjQ8pepkKx6A/profile-displayphoto-shrink_200_200/0/1601593185038?e=1654128000&amp;v=beta&amp;t=W7wTL2gGbx2CSLLzU0DYTX8E3QJc2pzePccy_nM7f4Q" class="bookmark-image"/></a></figure></div><div id="9e646152-ae19-4e69-82b0-5620d9b06088" style="width:50.000000000000014%" class="column"><p id="839f029e-e25a-4427-a4d5-2f2adeb5728c" class="">E-mail: <strong>Jacobusbernardo@gmail.com</strong></p><p id="2c480fd7-3005-44f8-ab49-eb42eec2884f" class="">Telefone: <strong>(51) 98015-8008</strong></p></div></div><p id="0f5fd81f-6aec-4773-af36-b9d214bfde97" class="">
+</p></div></article></body></html>
