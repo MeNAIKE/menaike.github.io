@@ -29,7 +29,7 @@ jobs:
         with:
           NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
           NOTION_DATABASE: https://jacobusbernardo.notion.site/Ol-eu-sou-Bernardo-Jacobus-06a1e99a577f40729f510aa3fa0a79f6
-          FILTER_PROP: Status
+          #FILTER_PROP: Status
           FILTER_VALUES: Published
           CONVERT_PROP_CASE: snake
           ARTICLE_PATH: content/posts/{title}/README.md
